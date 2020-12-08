@@ -7,7 +7,7 @@ import sys
 #archivo = sys.argv[1]
 #instituto = sys.argv[2]
 
-archivo = 'C:/Users/Rafael/Desktop/Facultad/IntegracionDatos/escuelaDelPlataAuxmatricula.xlsx'
+archivo = 'C:/Users/Rafael/Desktop/Facultad/IntegracionDatos/IDatos/escuelaDelPlataAuxmatricula.xlsx'
 instituto = 'ESCUELA DEL PLATA'
 
 wb = xlrd.open_workbook(str(archivo))
@@ -100,12 +100,18 @@ for i in range(1,66):
                 valor = re.search("[\d|/]+$", aux,re.DOTALL)
                 print('valor = ',valor)
                 if valor is not  None:
-                        print('hola')
+                        
+                        aux = valor
+                                aux = aux.split('/')
+                                valor = datetime.date(int(aux[2]), int(aux[1]), int(aux[0]))
+                                datos['VencSalud'] = valor
                         datos['VencSalud'] = valor.__getitem__(0)
                 else:
                         print('kjdajkad')
-                        aux = hoja.cell_value(i,1)
-                        print(aux)
+                        aux = hoja.cell_value(i,7)
+                        print('aux',aux)
+                        valor = re.search("\d", aux,re.DOTALL)
+                        print('valor = ',valor)
 
         elif re.search(".*Promovido.*", iter,re.DOTALL):
                 aux = hoja.cell_value(i,36)

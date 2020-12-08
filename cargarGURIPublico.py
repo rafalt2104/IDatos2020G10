@@ -6,7 +6,7 @@ import sys
 
 archivo = sys.argv[1]
 print(archivo)
-#archivo = 'C:/Users/Rafael/Desktop/Facultad/IntegracionDatos/arauxiliarmatricula.xlsx'
+#archivo = 'C:/Users/Rafael/Desktop/Facultad/IntegracionDatos/IDatos/arauxiliarmatricula.xlsx'
 instituto = 'ESCUELA DEL PLATA'
 
 wb = xlrd.open_workbook(str(archivo))
@@ -21,7 +21,7 @@ datos['grupo'] = grupo
 
 
 #print('Num rows = ',hoja.nrows)
-for i in range(1,hoja.nrows):
+for i in range(1,66):
         iter = hoja.cell_value(i,0)
         iter = str(iter)
 
@@ -93,6 +93,7 @@ for i in range(1,hoja.nrows):
         elif re.search(".*Promovido.*", iter,re.DOTALL):
                 aux = hoja.cell_value(i,36)
                 valor = metodosCarga.mapeoCalif(aux)
+                print(valor)
                 datos['Calificacion'] = valor
         elif re.search(".*FALTAS JUSTIFICADAS.*", iter,re.DOTALL):
                 aux = hoja.cell_value(i,11)
