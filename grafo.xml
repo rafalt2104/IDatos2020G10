@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:Alumno="https://estudiantesuruguay.com.uy/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+>
+  <rdf:Description rdf:about="Alumno1">
+    <Alumno:calificacion>S</Alumno:calificacion>
+    <Alumno:fechaNac rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-18</Alumno:fechaNac>
+    <rdf:type rdf:resource="https://estudiantesuruguay.com.uy/Alumno/"/>
+    <Alumno:instituto rdf:resource="https://www.escueladelplata.com/"/>
+    <Alumno:inasistencias>1</Alumno:inasistencias>
+    <Alumno:nombre rdf:resource="https://estudiantesuruguay.com.uy/Alumno/Alumno1"/>
+    <Alumno:localidad rdf:resource="https://www.wikidata.org/wiki/Q983435"/>
+    <Alumno:carneSaludVencimiento>18/02/2020</Alumno:carneSaludVencimiento>
+  </rdf:Description>
+</rdf:RDF>
