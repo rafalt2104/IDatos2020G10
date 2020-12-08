@@ -4,10 +4,9 @@ import datetime
 import metodosCarga
 import sys
 
-#archivo = sys.argv[1]
-#instituto = sys.argv[2]
+archivo = sys.argv[1]
 
-archivo = 'C:/Users/Rafael/Desktop/Facultad/IntegracionDatos/IDatos/escuelaDelPlataAuxmatricula.xlsx'
+#archivo = 'C:/Users/Rafael/Desktop/Facultad/IntegracionDatos/IDatos/escuelaDelPlataAuxmatricula.xlsx'
 instituto = 'ESCUELA DEL PLATA'
 
 wb = xlrd.open_workbook(str(archivo))
@@ -102,9 +101,9 @@ for i in range(1,66):
                 if valor is not  None:
                         
                         aux = valor
-                                aux = aux.split('/')
-                                valor = datetime.date(int(aux[2]), int(aux[1]), int(aux[0]))
-                                datos['VencSalud'] = valor
+                        aux = aux.split('/')
+                        valor = datetime.date(int(aux[2]), int(aux[1]), int(aux[0]))
+                        datos['VencSalud'] = valor
                         datos['VencSalud'] = valor.__getitem__(0)
                 else:
                         print('kjdajkad')

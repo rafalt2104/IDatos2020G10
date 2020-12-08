@@ -17,7 +17,6 @@ datos = {}
 
 for i in range(3,hoja.nrows):
     datos = {}
-    print(i)
     datos['Localidad'] = hoja.cell_value(i,23)
     aux = hoja.cell_value(i,11)
     aux = aux.split('/')
