@@ -5,9 +5,8 @@ import metodosCarga
 import sys
 
 archivo = sys.argv[1]
-print(archivo)
 #archivo = 'C:/Users/Rafael/Desktop/Facultad/IntegracionDatos/IDatos/arauxiliarmatricula.xlsx'
-instituto = 'ESCUELA DEL PLATA'
+instituto = 'ESCUELA TC 118'
 
 wb = xlrd.open_workbook(str(archivo))
 
@@ -21,7 +20,7 @@ datos['grupo'] = grupo
 
 
 #print('Num rows = ',hoja.nrows)
-for i in range(1,66):
+for i in range(1,hoja.nrows):
         iter = hoja.cell_value(i,0)
         iter = str(iter)
 
@@ -93,7 +92,6 @@ for i in range(1,66):
         elif re.search(".*Promovido.*", iter,re.DOTALL):
                 aux = hoja.cell_value(i,36)
                 valor = metodosCarga.mapeoCalif(aux)
-                print(valor)
                 datos['Calificacion'] = valor
         elif re.search(".*FALTAS JUSTIFICADAS.*", iter,re.DOTALL):
                 aux = hoja.cell_value(i,11)

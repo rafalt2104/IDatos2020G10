@@ -42,7 +42,7 @@ def mapeoCalif(calif):
         sql = "Select valorNum From " + base_de_datos + ".`calificaciones` where valor = '" + str(calif) + "'"
         cursor.execute(sql)
 
-        valorNum = cursor.fetchone[0]
+        valorNum = cursor.fetchone()[0]
         db.close()
         return valorNum
 
