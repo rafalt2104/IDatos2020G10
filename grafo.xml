@@ -4,13 +4,23 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
   <rdf:Description rdf:about="Alumno1">
-    <Alumno:calificacion>S</Alumno:calificacion>
-    <Alumno:fechaNac rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-18</Alumno:fechaNac>
-    <rdf:type rdf:resource="https://estudiantesuruguay.com.uy/Alumno/"/>
-    <Alumno:instituto rdf:resource="https://www.escueladelplata.com/"/>
-    <Alumno:inasistencias>1</Alumno:inasistencias>
-    <Alumno:nombre rdf:resource="https://estudiantesuruguay.com.uy/Alumno/Alumno1"/>
     <Alumno:localidad rdf:resource="https://www.wikidata.org/wiki/Q983435"/>
-    <Alumno:carneSaludVencimiento>18/02/2020</Alumno:carneSaludVencimiento>
+    <Alumno:calificacion>12</Alumno:calificacion>
+    <rdf:type rdf:resource="https://estudiantesuruguay.com.uy/Alumno/"/>
+    <Alumno:fechaNac rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-18</Alumno:fechaNac>
+    <Alumno:carneSaludVencimiento rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-02-18</Alumno:carneSaludVencimiento>
+    <Alumno:inasistencias>1</Alumno:inasistencias>
+    <Alumno:instituto rdf:resource="https://uy.todosnegocios.com/escuela-n-tc-2347-8199"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="Alumno2">
+    <Alumno:carneSaludVencimiento rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-12-04</Alumno:carneSaludVencimiento>
+    <Alumno:instituto rdf:resource="https://uy.todosnegocios.com/escuela-n-tc-2347-8199"/>
+    <Alumno:calificacion>8</Alumno:calificacion>
+    <rdf:type rdf:resource="https://estudiantesuruguay.com.uy/Alumno/"/>
+    <Alumno:localidad rdf:resource="https://www.wikidata.org/wiki/Q383094"/>
+    <Alumno:emergencia rdf:resource="https://www.xn--espaolamovil-dhb.com/"/>
+    <Alumno:inasistencias>29</Alumno:inasistencias>
+    <Alumno:mutualista rdf:resource="semm.com.uy"/>
+    <Alumno:fechaNac rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-12-12</Alumno:fechaNac>
   </rdf:Description>
 </rdf:RDF>

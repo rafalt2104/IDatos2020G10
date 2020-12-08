@@ -33,17 +33,17 @@ config = {
 def contructorRDF():
         records = metodosCarga.datosRDF()
 
+        i = 0
         for record in records:
             identificador = record[0]
-            nombre = record[1]
-            localidad = record[2]
-            fechaNac = record[3]
-            mutualista = record[4]
-            emergencia = record[5]
-            carneSaludVencimiento = record[6]
-            calificacion = record[7]
-            inasistencias = record[8]
-            instituto = record[9]
+            localidad = record[1]
+            fechaNac = record[2]
+            mutualista = record[3]
+            emergencia = record[4]
+            carneSaludVencimiento = record[5]
+            calificacion = record[6]
+            inasistencias = record[7]
+            instituto = record[8]
 
             #Obtener URI's
             localidadURI,mutualistaURI,emergenciaURI,institutoURI = metodosCarga.getURI(localidad,mutualista,emergencia,instituto)
@@ -53,8 +53,6 @@ def contructorRDF():
 
             g.add((idAlumno, RDF.type, URIRef("https://estudiantesuruguay.com.uy/Alumno/")))
             
-            if (nombre != ""):
-                g.add((idAlumno, Alumno.nombre, URIRef("https://estudiantesuruguay.com.uy/Alumno/" + nombre)))
             if (fechaNac != ""):
                 g.add((idAlumno, Alumno.fechaNac, Literal(fechaNac)))
             if (localidad != ""):
@@ -74,7 +72,11 @@ def contructorRDF():
             if (instituto != ""):
                 g.add((idAlumno, Alumno.instituto, URIRef(institutoURI)))
 
-            break
+            i += 1
+            if i == 2:
+                break
+
+            
                 
             
 contructorRDF()

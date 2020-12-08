@@ -38,7 +38,8 @@ def validarEmergencia(dato):
 def mapeoCalif(calif):
         db = mysql.connector.connect(**config)
         cursor = db.cursor()
-        
+        calif = calif.strip()
+
         sql = "Select valorNum From " + base_de_datos + ".`calificaciones` where valor = '" + str(calif) + "'"
         cursor.execute(sql)
 
